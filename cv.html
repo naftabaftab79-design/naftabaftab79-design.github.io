@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveed Aftab Usmani | CV</title>
+    <meta
+      name="description"
+      content="Curriculum Vitae of Naveed Aftab Usmani, Product Manager and Client Solution Manager."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --cv-bg: #07111f;
+        --cv-panel: rgba(16, 29, 42, 0.86);
+        --cv-border: rgba(174, 201, 232, 0.18);
+        --cv-card: rgba(255, 255, 255, 0.025);
+        --cv-text: #edf6ff;
+        --cv-muted: #b7c9d9;
+        --cv-accent: #7dd3fc;
+        --cv-primary: #6ee7b7;
+      }
+
+      body {
+        background: linear-gradient(180deg, #07111f 0%, #0d1928 100%);
+      }
+
+      .cv-page {
+        padding: 56px 0 70px;
+      }
+
+      .cv-shell {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: linear-gradient(180deg, rgba(17, 30, 42, 0.96), rgba(11, 20, 31, 0.94));
+        border: 1px solid var(--cv-border);
+        border-radius: 32px;
+        box-shadow: 0 18px 40px rgba(7, 17, 31, 0.35);
+        overflow: hidden;
+      }
+
+      .cv-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        background: linear-gradient(135deg, rgba(110, 231, 183, 0.12), rgba(125, 211, 252, 0.06));
+        border-bottom: 1px solid var(--cv-border);
+        padding: 34px 32px 28px;
+      }
+
+      .cv-header h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 4vw, 3.5rem);
+        letter-spacing: -0.06em;
+        line-height: 1;
+      }
+
+      .cv-role {
+        margin-top: 10px;
+        color: var(--cv-accent);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+
+      .cv-contact {
+        display: grid;
+        gap: 6px;
+        color: var(--cv-muted);
+        font-size: 0.95rem;
+        text-align: right;
+      }
+
+      .cv-body {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: 0;
+      }
+
+      .cv-main,
+      .cv-side {
+        padding: 28px 32px 18px;
+      }
+
+      .cv-main {
+        border-right: 1px solid var(--cv-border);
+      }
+
+      .cv-side {
+        background: rgba(255, 255, 255, 0.018);
+      }
+
+      .cv-section {
+        margin-bottom: 26px;
+      }
+
+      .cv-section h2 {
+        margin: 0 0 14px;
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--cv-primary);
+        font-weight: 800;
+      }
+
+      .cv-section p,
+      .cv-section li {
+        color: var(--cv-muted);
+        line-height: 1.8;
+      }
+
+      .cv-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .cv-list li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 10px;
+      }
+
+      .cv-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--cv-primary);
+      }
+
+      .summary-box {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--cv-border);
+        border-radius: 18px;
+        padding: 18px;
+        margin-bottom: 22px;
+      }
+
+      .summary-box h3 {
+        margin: 0 0 12px;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--cv-primary);
+      }
+
+      .summary-box p {
+        margin: 0;
+        color: var(--cv-muted);
+        line-height: 1.75;
+      }
+
+      .chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(125, 211, 252, 0.09);
+        border: 1px solid rgba(125, 211, 252, 0.12);
+        color: var(--cv-text);
+        font-size: 0.82rem;
+      }
+
+      @media (max-width: 900px) {
+        .cv-body {
+          grid-template-columns: 1fr;
+        }
+
+        .cv-main {
+          border-right: none;
+          border-bottom: 1px solid var(--cv-border);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .cv-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .cv-contact {
+          text-align: left;
+        }
+
+        .cv-main,
+        .cv-side {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">NA</span>
+          <span>Naveed Aftab Usmani</span>
+        </div>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#achievements">Achievements</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="button button-primary" href="naveed-aftab-usmani-cv.docx">Download CV</a>
+      </div>
+    </header>
+
+    <main class="cv-page">
+      <div class="container">
+        <div class="cv-shell">
+          <div class="cv-header">
+            <div>
+              <h1>Naveed Aftab Usmani</h1>
+              <div class="cv-role">Product Manager | Client Solution Manager</div>
+            </div>
+            <div class="cv-contact">
+              <div>naftab.aftab79@gmail.com</div>
+              <div>+92 336 205 9097</div>
+              <div>Karachi, Pakistan</div>
+            </div>
+          </div>
+
+          <div class="cv-body">
+            <div class="cv-main">
+              <section class="cv-section">
+                <h2>Career Objective</h2>
+                <p>
+                  To use Product Management, Product Ownership, and Business Analysis in facilitating achievement of organizational objectives through aligned technology, processes, and stakeholder solutions that improve productivity, profitability, and long-term strategic growth.
+                </p>
+              </section>
+
+              <section class="cv-section">
+                <h2>Core Experience</h2>
+                <ul class="cv-list">
+                  <li>Product strategy, roadmap planning, and business analysis</li>
+                  <li>Marketplace syndication across major retail and ecommerce platforms</li>
+                  <li>CRM implementation and operational workflow optimization</li>
+                  <li>Digital transformation, data governance, and content operations</li>
+                  <li>Cross-functional leadership and stakeholder engagement</li>
+                </ul>
+              </section>
+
+              <section class="cv-section">
+                <h2>Professional Journey</h2>
+                <ul class="cv-list">
+                  <li>Product Manager at NIQ Brandbank</li>
+                  <li>Manager Business Analyst | Product Owner at NIQ Brandbank</li>
+                  <li>Business Analyst at NIQ Brandbank</li>
+                  <li>Industry Lead and Category Manager roles</li>
+                  <li>Data Processing Engineer and earlier IT/network roles</li>
+                </ul>
+              </section>
+
+              <section class="cv-section">
+                <h2>Education</h2>
+                <ul class="cv-list">
+                  <li>MBA Marketing – University of Karachi</li>
+                  <li>BS Computer Science – Sir Syed University of Engineering &amp; Technology</li>
+                </ul>
+              </section>
+            </div>
+
+            <aside class="cv-side">
+              <div class="summary-box">
+                <h3>Profile</h3>
+                <p>
+                  Product and business analysis professional focused on building scalable solutions, improving workflows, and aligning technology with business objectives.
+                </p>
+              </div>
+
+              <section class="cv-section">
+                <h2>Key Skills</h2>
+                <div class="chip-list">
+                  <span class="chip">Product Management</span>
+                  <span class="chip">Business Analysis</span>
+                  <span class="chip">CRM Systems</span>
+                  <span class="chip">Requirement Engineering</span>
+                  <span class="chip">Data Management</span>
+                  <span class="chip">AI &amp; Digital Innovation</span>
+                  <span class="chip">Leadership</span>
+                  <span class="chip">Strategy</span>
+                </div>
+              </section>
+
+              <section class="cv-section">
+                <h2>Languages</h2>
+                <ul class="cv-list">
+                  <li>Urdu</li>
+                  <li>English</li>
+                  <li>Arabic</li>
+                </ul>
+              </section>
+
+              <section class="cv-section">
+                <h2>Focus Areas</h2>
+                <ul class="cv-list">
+                  <li>Marketplace syndication</li>
+                  <li>Digital transformation</li>
+                  <li>CRM and workflow optimization</li>
+                  <li>AI-enabled business operations</li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
