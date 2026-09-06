@@ -205,9 +205,12 @@ img {
 .profile-photo {
   display: block;
   width: 100%;
-  height: 220px;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
   object-fit: cover;
   object-position: center top;
+  border-radius: 18px;
 }
 
 .panel-header {
